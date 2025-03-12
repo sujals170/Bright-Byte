@@ -95,56 +95,9 @@ app.post("/api/create-payment-intent", authMiddleware, async (req, res) => {
   }
 });
 
-// Enroll in Course
-// app.post("/api/enroll/:courseId", authMiddleware, async (req, res) => {
-//   const { courseId } = req.params;
-//   const { paymentId } = req.body; // Expect paymentId for paid courses
-//   const studentId = req.user.id;
-
-//   try {
-//     const course = await Course.findById(courseId);
-//     if (!course) {
-//       return res.status(404).json({ message: "Course not found" });
-//     }
-
-//     // Check if already enrolled
-//     if (course.students.includes(studentId)) {
-//       return res.status(400).json({ message: "Already enrolled in this course" });
-//     }
-
-//     if (course.isFree) {
-//       // Free course: Enroll immediately
-//       course.students.push(studentId);
-//       await course.save();
-//       console.log("[Server] Free course enrollment successful:", courseId, studentId);
-//       return res.json({ message: "Enrollment successful" });
-//     } else {
-//       // Paid course: Verify payment
-//       if (!paymentId) {
-//         return res.status(400).json({ message: "Payment ID required for paid course" });
-//       }
-
-//       const paymentIntent = await stripe.paymentIntents.retrieve(paymentId);
-//       if (paymentIntent.status !== "succeeded") {
-//         return res.status(400).json({ message: "Payment not completed" });
-//       }
-//       if (paymentIntent.metadata.courseId !== courseId || paymentIntent.metadata.studentId !== studentId) {
-//         return res.status(400).json({ message: "Payment metadata mismatch" });
-//       }
 
 
 
-//       // Enroll student after payment verification
-//       course.students.push(studentId);
-//       await course.save();
-//       console.log("[Server] Paid course enrollment successful:", courseId, studentId);
-//       return res.json({ message: "Enrollment successful" });
-//     }
-//   } catch (error) {
-//     console.error("[Server] Error enrolling student:", error.message);
-//     res.status(500).json({ message: "Enrollment failed" });
-//   }
-// });
 
 
 // Enroll in Paid Course (New endpoint)
