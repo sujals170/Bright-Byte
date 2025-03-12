@@ -24,7 +24,7 @@ connectDB();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: "bright-byte.vercel.app",
     methods: ["GET", "POST"],
     credentials: true,
   },
@@ -33,7 +33,7 @@ const io = new Server(server, {
 });
 
 app.use(express.json());
-app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+app.use(cors({ origin: "bright-byte.vercel.app", credentials: true }));
 app.use(cookieParser());
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use("/certificates", express.static(path.join(__dirname, "certificates")));
