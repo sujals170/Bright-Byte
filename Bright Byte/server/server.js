@@ -24,7 +24,7 @@ connectDB();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "bright-byte.vercel.app",
+    origin: "bright-byte-n1m6.vercel.app",
     methods: ["GET", "POST"],
     credentials: true,
   },
