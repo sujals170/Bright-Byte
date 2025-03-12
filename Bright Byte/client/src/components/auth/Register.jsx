@@ -32,7 +32,7 @@ function Register() {
     };
 
     // Updated endpoint to match backend
-    const endpoint = "http://localhost:3000/api/auth/register";
+    const endpoint = "bright-byte.vercel.app/api/auth/register";
 
     axios
       .post(endpoint, payload)
