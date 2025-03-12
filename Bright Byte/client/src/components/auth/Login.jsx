@@ -22,7 +22,7 @@ function Login() {
     const payload = { email, password };
 
     try {
-      const response = await axios.post("http://localhost:3000/api/auth/login", payload);
+      const response = await axios.post("bright-byte.vercel.app/api/auth/login", payload);
       if (response.data.status === true) {
           toast('Login successful!',
             {
