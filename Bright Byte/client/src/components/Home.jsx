@@ -6,7 +6,7 @@ import { jwtDecode } from "jwt-decode";
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:3000/api",
+  baseURL: "https://bright-byte.vercel.app/api",
   withCredentials: true,
 });
 
