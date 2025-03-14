@@ -36,8 +36,7 @@ app.use(express.json());
 // app.use(cors({ origin: "https://bright-byte-n1m6.vercel.app", credentials: true }));
 app.use(cors({
   origin: ["https://bright-byte-n1m6.vercel.app"],
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
 }));
 app.use(cookieParser());
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
