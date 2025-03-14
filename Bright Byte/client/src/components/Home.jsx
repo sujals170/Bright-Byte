@@ -106,7 +106,7 @@ function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 group">
             <GraduationCap className="h-8 w-8 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300" />
-            <span className="text-xl font-bold text-gray-100 group-hover:text-cyan-300 transition-colors duration-300">Bright Byte</span>
+            <span className="text-xl font-bold text-gray-100 group-hover:text-cyan-300 transition-colors duration-300">Bright</span>
           </Link>
           <div className="hidden md:flex items-center gap-6">
             <Link to="/" className="text-gray-200 hover:text-cyan-400 font-medium transition-all duration-300 hover:scale-105 active:text-cyan-500">Home</Link>
